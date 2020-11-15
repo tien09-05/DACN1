@@ -8,6 +8,7 @@ import About from './components/About';
 import Services from './components/Services,';
 import Login from './components/Login';
 import Error from './components/Error';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/about" component={About}></Route>
         <Route path="/services" component={Services}></Route>
         <Route path="/login" component={Login}></Route>
+        <Route path="/admin" component={Admin}></Route>
+
         <Route path="/:string" component={Error}></Route>
 
       </Switch>

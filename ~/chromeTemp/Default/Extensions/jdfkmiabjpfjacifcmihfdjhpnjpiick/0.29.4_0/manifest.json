@@ -1,0 +1,40 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "common/common.js", "content-script/content-script.js" ],
+      "matches": [ "https://*.xvideos.com/*", "https://lauxanh.org/*", "https://*.doisongphapluat.com/*", "https://*.thethaovanhoa.vn/*", "https://*.dailymotion.com/*", "https://bestie.vn/*", "https://docbao.vn/*", "https://gfycat.com/*", "https://*.motphim.net/*", "https://player.phimmoi.club/*", "http://pzc.phimmoi.net/embed/*", "http://player.asianfans.net/embed/*", "https://cdnx.live/player/*", "https://cdnx.stream/player/*", "https://ok.ru/videoembed/*", "https://playhydrax.com/*", "https://123phim.top/*", "https://phim18hd.net/player/*" ]
+   }, {
+      "all_frames": false,
+      "exclude_matches": [ "http://coccoc.com/webhp*", "https://coccoc.com/webhp*" ],
+      "js": [ "common/common.js", "content-script/content-script.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_idle"
+   } ],
+   "default_locale": "en",
+   "externally_connectable": {
+      "matches": [ "https://*.coccoc.com/*", "http://*.coccoc.com/*", "http://localhost/*" ]
+   },
+   "icons": {
+      "128": "images/logo_cc.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN4c7XRYXzpvahEEqCGsfZPXsl5kWXuv14AkytPEG4ok42OVda9wNV/GeZqYUO4IvW/3erMWGcnb+wyt2K9nds9aC+cKDf+eUU4vPAI8i/aWdPYe0G5tBlwitHJouftu9G5i6auE91IaXVbXkW5//zVHiB1v/MFunh4EkwfV9ONwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "48",
+   "name": "Cốc Cốc Savior",
+   "options_ui": {
+      "chrome_style": false,
+      "page": "options.html"
+   },
+   "page_action": {
+      "default_icon": "images/action_cc.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_page_action_title__"
+   },
+   "permissions": [ "tabs", "webRequest", "webRequestBlocking", "webNavigation", "metricsPrivate", "downloads", "downloads.open", "storage", "http://*/*", "https://*/*", "cookies" ],
+   "update_url": "https://browser.coccoc.com/service/update2/crx",
+   "version": "0.29.4",
+   "web_accessible_resources": [ "css/content-script.css", "images/*.*", "/features.json" ]
+}

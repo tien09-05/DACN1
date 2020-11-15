@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+  - This file is part of Cốc Cốc AdBlock <https://adblockplus.org/>,
+  - Copyright (C) 2006-present eyeo GmbH
+  -
+  - Cốc Cốc AdBlock is free software: you can redistribute it and/or modify
+  - it under the terms of the GNU General Public License version 3 as
+  - published by the Free Software Foundation.
+  -
+  - Cốc Cốc AdBlock is distributed in the hope that it will be useful,
+  - but WITHOUT ANY WARRANTY; without even the implied warranty of
+  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  - GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License
+  - along with Cốc Cốc AdBlock.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title data-i18n="options_page_document_title"></title>
+    <link rel="stylesheet" href="skin/common.css">
+    <link rel="stylesheet" href="skin/fonts/font.css">
+    <link rel="stylesheet" href="skin/desktop-options.css">
+    <script src="polyfill.js"></script>
+    <script src="ext/common.js"></script>
+    <script src="ext/content.js"></script>
+    <script src="common.js"></script>
+    <script src="i18n.js"></script>
+    <script defer src="desktop-options.js"></script>
+  </head>
+  <body data-tab="general">
+    <main>
+
+      <!-- Whitelist tab content -->
+      <div id="content-whitelist" role="tabpanel" aria-labelledby="tab-whitelist">
+        <div class="options-page-header">
+          <div class="options-page-logo"> </div>
+          <div class="options-page-title">
+            <h2 data-i18n="options_page_title"></h2>
+            <p data-i18n="options_general_description"></p>
+          </div>
+        </div>
+        <div class="options-page-content">
+          <div id="content-options">
+            <div class="content-options-title">
+              <p data-i18n="options_whitelist_title"></p>
+            </div>
+            <div class="content-options-mode">
+              <div>
+                <p data-i18n="options_whitelist_mode"></p>
+                <p data-i18n="options_whitelist_mode_note_1"></p>
+              </div>
+              <div class="select-standard" data-action="select-mode">
+                <select>
+                  <option value="0" data-action="standard-mode" data-i18n="options_whitelist_mode_standard"></option>
+                  <option value="1" data-action="strict-mode" data-i18n="options_whitelist_mode_strict"></option>
+                </select>
+              </div>
+            </div>
+            <div class="content-options-ads">
+              <div>
+                <p data-i18n="options_acceptableAds_ads_label"></p>
+                <p data-i18n="options_acceptableAds_ads_description_1"></p>
+              </div>
+              <div class="toggle-switch">
+                <input type="checkbox" class ="switch-checkbox" name="acceptable-ads-allow" id="acceptable-ads-allow" data-action="switch-acceptable-ads" role="checkbox" name="acceptable-ads" value="ads">
+                <label for="acceptable-ads-allow">
+                  <span class="toggle-track" id="acceptable-ads-toggle"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div id="whitelisting-block">
+            <div class="whitelisting-title">
+              <p data-i18n="options_whitelist_notification"></p>
+            </div>
+            <form>
+              <input id="whitelisting-textbox" autocomplete="off" type="text"
+                data-i18n-placeholder="options_whitelist_placeholder_example">
+              <button id="whitelisting-add-button"
+                      type="submit"
+                      data-action="add-domain-exception"
+                      data-i18n="options_whitelist_add" class="primary" disabled>
+              </button>
+            </form>
+            <ul id="whitelisting-table" class="table list">
+              <template>
+                <span class="reset-font" data-display="title"></span>
+                <button data-action="remove-filter" class="icon delete control"
+                  data-i18n-title="options_control_remove_title">
+                </button>
+              </template>
+            </ul>
+          </div>
+        </div>
+        <div class="power-by">
+          <div class="logo"></div>
+          <p class="power-by-text" data-i18n="power_by"></p>
+        </div>
+      </div>
+    </main>
+
+     <!-- Notification -->
+    <div id="notification" aria-hidden="true" aria-live="polite">
+      <strong id="notification-text"></strong>
+      <button class="icon close secondary" data-action="hide-notification">
+        <span data-i18n="common_notification_hide" class="sr-only"></span>
+      </button>
+    </div>
+  </body>
+</html>

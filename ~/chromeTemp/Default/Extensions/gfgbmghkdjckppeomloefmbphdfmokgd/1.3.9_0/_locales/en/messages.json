@@ -1,0 +1,82 @@
+{
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "English-Vietnamese dictionary"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "Cốc Cốc Dictionary"
+   },
+   "banner_text": {
+      "description": "Text content for banner",
+      "message": "Look up any English word instantly on any website, just double-click on the word you need!"
+   },
+   "context_menu_translate": {
+      "description": "Context menu template to prompt translation",
+      "message": "Translate: %s"
+   },
+   "conversion_btn_already": {
+      "description": "Text for button already use in conversion notification",
+      "message": "I already used"
+   },
+   "conversion_btn_try": {
+      "description": "Text for button try now in conversion notification",
+      "message": "Try now"
+   },
+   "conversion_noti_header": {
+      "description": "Conversion notification tooltip header",
+      "message": "Do you know"
+   },
+   "conversion_noti_message": {
+      "description": "Conversion notification tooltip message",
+      "message": "Cốc Cốc can show the price in VND by selecting the price"
+   },
+   "female_voice_gender": {
+      "description": "Female voice",
+      "message": "Female"
+   },
+   "gb_accent": {
+      "description": "Voice en-GB",
+      "message": "British accent"
+   },
+   "i_know_it": {
+      "description": "Text content for button on banner",
+      "message": "I know it"
+   },
+   "male_voice_gender": {
+      "description": "Male voice",
+      "message": "Male"
+   },
+   "options_double_click_translate": {
+      "description": "Options' enable translate on double click label",
+      "message": "Double click to translate word to vietnamese"
+   },
+   "options_input_translate": {
+      "description": "Options' enable translate in input/textarea forms label",
+      "message": "Enable dictionary inside the text area"
+   },
+   "options_master_switch": {
+      "description": "Options page's master switch text",
+      "message": "Enable the dictionary"
+   },
+   "options_show_tooltip": {
+      "description": "Options' enable show tooltip when blackening a word/phrase",
+      "message": "Show the tooltip when highlighting a word or phrase"
+   },
+   "options_title": {
+      "description": "Options page title",
+      "message": "Options for Dictionary"
+   },
+   "show_me_how": {
+      "description": "Text content for button on banner",
+      "message": "Show me how"
+   },
+   "us_accent": {
+      "description": "Voice en_US",
+      "message": "American accent"
+   },
+   "voice_features": {
+      "description": "Title of voice features option",
+      "message": "Voice features"
+   }
+}

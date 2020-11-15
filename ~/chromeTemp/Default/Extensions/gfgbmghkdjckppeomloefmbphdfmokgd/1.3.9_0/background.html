@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <div id="popup-template">
+    <div class="coccoc-head">
+      <div class="coccoc-line">
+        <div class="coccoc-group">
+          <div class="coccoc-word">
+            {{word}}
+          </div>
+          <div class="coccoc-speaker" id="btn_speaker"></div>
+        </div>
+        <div class="coccoc-group">
+          <div class="coccoc-more" id="btn_more"></div>
+          <div class="coccoc-close" id="btn_close"></div>
+        </div>
+      </div>
+      <div class="coccoc-line">
+        {{#pronunciations}}
+        <div class="coccoc-pronunciation">
+          <div class="coccoc-pronun-text">{{text}}</div>
+          <div class="coccoc-pronun-type"> - {{type}} </div>
+        </div>
+        {{/pronunciations}}
+      </div>
+    </div>
+    <div class="coccoc-scroll">
+      <div class="coccoc-translations">
+        {{initIndex}} {{#translations}}
+        <div class="coccoc-translation">
+          <div class="coccoc-tn-type">
+            {{type}}
+          </div>
+          <div class="coccoc-tn-meanings">
+            {{resetIndex}} {{#meaning}} {{incIndex}}
+            <div class="coccoc-tn-meaning">
+              {{getIndex}}. {{.}}
+            </div>
+            {{/meaning}}
+          </div>
+          <div class="coccoc-tn-example">
+            {{example}}
+          </div>
+        </div>
+        {{/translations}}
+      </div>
+      {{#existWriting}}
+      <hr class="coccoc-sep">
+      <div class="coccoc-w-header">
+        Cách viết
+      </div>
+      {{/existWriting}}
+      <div class="coccoc-writing">
+        {{#writing}}
+        <div class="coccoc-w-field">
+          <div class="coccoc-w-name">{{name}}: </div>
+          <div class="coccoc-w-value">{{value}}</div>
+        </div>
+        {{/writing}}
+      </div>
+      {{#link}}
+      <hr class="coccoc-sep">
+      <div class="coccoc-links">
+        <div class="coccoc-link-header">
+          Các từ liên quan
+        </div>
+        <div class="coccoc-link">
+          <a id="coccoc-synonym" href="https://www.coccoc.com/search#query={{link}}" target="_blank">{{link}}</a>
+        </div>
+      </div>
+      {{/link}}
+    </div>
+  </div>
+
+  <div id="tooltip-main">
+    {{#isCurrencyConvert}}
+    <div class="coccoc-btn-currencies"></div>
+    {{/isCurrencyConvert}}
+    <div class="coccoc-conversion">
+      <div class="coccoc-conversion-bound">
+        <div class="coccoc-value-from" title="{{value_from}}">
+          <div class="coccoc-value">{{value_from}}</div>
+          <div class="coccoc-value-copied">Đã copy</div>
+        </div>
+        <div class="coccoc-arrow"></div>
+        <div class="coccoc-value-to" title="{{value_to.exact}}">
+          <div class="coccoc-value">{{value_to.semantic}}</div>
+          <div class="coccoc-value-copied">Đã copy</div>
+        </div>
+      </div>
+      <div class="coccoc-info-text">
+        Tỷ giá bởi&nbsp;<span>{{rate_source}}</span>
+      </div>
+    </div>
+    {{#isCurrencyConvert}}
+    <div class="coccoc-btn-info"></div>
+    {{/isCurrencyConvert}}
+    {{#btn_copy}}
+    <div class="coccoc-btn-copy"></div>
+    {{/btn_copy}}
+    <div class="coccoc-btn-close"></div>
+  </div>
+  <div id="tooltip-more-currencies">
+    <div class="coccoc-other-currencies">
+      {{#currencies}}
+      <div class="coccoc-currency">
+        <div class="coccoc-currency-short">
+          {{short}}
+        </div>
+        <div class="coccoc-currency-tw">
+          <div class="coccoc-currency-value" title="{{value}}">
+            {{value}}
+          </div>
+          <div class="coccoc-currency-sign">
+            {{sign}}
+          </div>
+        </div>
+        <div class="coccoc-currency-copied">Đã copy</div>
+      </div>
+      {{/currencies}}
+    </div>
+    <div class="coccoc-more-control">
+      <div class="coccoc-more-back">
+      </div>
+      <div class="coccoc-more-add">
+        Thêm ngoại tệ khác
+      </div>
+    </div>
+  </div>
+  <div id="tooltip-add-currencies">
+    Chức năng này sẽ tiếp tục cập nhật bạn nhé, hy vọng bạn cảm thấy hài lòng
+  </div>
+  <div id="tooltip-notification">
+    <div class="noti-logo-ico">
+    </div>
+    <div class="noti-content">
+      <div class="noti-header">
+        {{conversion_noti_header}}
+      </div>
+      <div class="noti-message">
+        {{conversion_noti_message}}
+      </div>
+      <div class="noti-btn-group">
+        <button class="noti-btn already-use" id="noti_btn_already">{{conversion_btn_already}}</button>
+        <button class="noti-btn try-now" id="noti_btn_try">{{conversion_btn_try}}</button>
+      </div>
+    </div>
+    <div class="noti-close-btn" id="noti_btn_close">
+    </div>
+  </div>
+  <div id="tooltip-wave-focusing">
+      <div class="tooltip-wave"></div>
+      <div class="tooltip-wave delay"></div>
+  </div>
+
+  <script src="scripts/background.js"></script>
+</body>
+
+</html>

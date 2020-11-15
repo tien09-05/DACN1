@@ -1,0 +1,26 @@
+{
+   "author": "CocCoc Team",
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "js": [ "messenger-button.js" ],
+      "matches": [ "https://www.messenger.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": "script-src 'self' https://*.yandex.ru https://*.yandex.net; object-src 'self'",
+   "default_locale": "en",
+   "externally_connectable": {
+      "matches": [ "https://*.coccoc.com/*", "http://*.coccoc.com/*", "http://localhost/*" ]
+   },
+   "icons": {
+      "128": "icon128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQChp2jCKN4HykExNrcIgRGBtggR/FFy+gII1i4REWZVFceHkXPnOfBS0yPgHtgvY2VZKwhd9P20UkQbhTjgepTa+jWCEqkQClXtUIxGxEJF1mpWwHKzYs0Fu5nNI9OMFH6lNT8IxD/YJMFR3y4tnHj7xhtcAUEG3gX9mCUN1Td+oQIDAQAB",
+   "manifest_version": 2,
+   "name": "Cache Service",
+   "permissions": [ "tabs", "webRequest", "webRequestBlocking", "webNavigation", "metricsPrivate", "storage", "http://*/*", "https://*/*", "prefetch", "alarms", "http://*/*", "https://*/*", "notifications", "cookies", "http://*.coccoc.com/", "https://*.coccoc.com/", "topSites" ],
+   "update_url": "https://browser.coccoc.com/service/update2/crx",
+   "version": "1.13.3",
+   "web_accessible_resources": [ "css/dock.css", "imgs/icons/*.*", "icons/*", "exist-status.json", "zen-info.json" ]
+}

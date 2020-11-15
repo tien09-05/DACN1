@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "exclude_matches": [ "*://coccoc.com/webhp*" ],
+      "js": [ "scripts/document_start.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "48": "images/icon-36.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCXJNh5s3sXkhBXyo2YwqAwVEunxvXVY+NOL2NdAkfqtTDxWBU6lmjvmK05EmK1+8mQVl1tsf4Ikb8S2mWx2XK3Smq0tkZoUVldXVz2qcmGwdWs9gT68vDBGDGHQCXuwZfCsPfZL9GxiFcvYcia7kaBtrtWjJEF2GPM0fL2h2p6QIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "contextMenus", "storage", "metricsPrivate", "http://*/*", "https://*/*", "tts" ],
+   "update_url": "http://service.corom.vn/service/update2/crx",
+   "version": "1.3.9",
+   "web_accessible_resources": [ "css/style.css", "images/*", "css/banner.css" ]
+}

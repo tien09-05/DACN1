@@ -1,0 +1,1 @@
+window.startTs = parseInt(performance.now());

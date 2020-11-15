@@ -1,0 +1,82 @@
+{
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "Từ điển Anh-Việt"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "Cốc Cốc Từ Điển"
+   },
+   "banner_text": {
+      "description": "Text content for banner",
+      "message": "Tra từ điển Anh - Việt ngay trên website, chỉ cần click đúp chuột vào từ cần tra!"
+   },
+   "context_menu_translate": {
+      "description": "Context menu template to prompt translation",
+      "message": "Dịch: %s"
+   },
+   "conversion_btn_already": {
+      "description": "Text for button already use in conversion notification",
+      "message": "Tôi đã dùng rồi"
+   },
+   "conversion_btn_try": {
+      "description": "Text for button try now in conversion notification",
+      "message": "Thử luôn"
+   },
+   "conversion_noti_header": {
+      "description": "Conversion notification tooltip header",
+      "message": "Bạn có biết"
+   },
+   "conversion_noti_message": {
+      "description": "Conversion notification tooltip message",
+      "message": "Chỉ cần bôi đen giá tiền, Cốc Cốc sẽ cho bạn biết giá VND tương ứng"
+   },
+   "female_voice_gender": {
+      "description": "Female voice",
+      "message": "Nữ"
+   },
+   "gb_accent": {
+      "description": "Voice en-GB",
+      "message": "Giọng Anh - Anh"
+   },
+   "i_know_it": {
+      "description": "Text content for button on banner",
+      "message": "Tôi đã hiểu"
+   },
+   "male_voice_gender": {
+      "description": "Male voice",
+      "message": "Nam"
+   },
+   "options_double_click_translate": {
+      "description": "Options' enable translate on double click label",
+      "message": "Nháy đúp để dịch từ sang Tiếng Việt"
+   },
+   "options_input_translate": {
+      "description": "Options' enable translate in input/textarea forms label",
+      "message": "Bật tính năng dịch cho từ trong khung soạn thảo"
+   },
+   "options_master_switch": {
+      "description": "Options page's master switch text",
+      "message": "Bật từ điển"
+   },
+   "options_show_tooltip": {
+      "description": "Options' enable show tooltip when blackening a word/phrase",
+      "message": "Hiện tooltip khi bôi đen từ hoặc đoạn"
+   },
+   "options_title": {
+      "description": "Options page title",
+      "message": "Tùy chọn từ điển"
+   },
+   "show_me_how": {
+      "description": "Text content for button on banner",
+      "message": "Xem hướng dẫn"
+   },
+   "us_accent": {
+      "description": "Voice en_US",
+      "message": "Giọng Anh - Mỹ"
+   },
+   "voice_features": {
+      "description": "Title of voice features option",
+      "message": "Tính năng giọng nói"
+   }
+}

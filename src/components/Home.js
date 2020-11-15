@@ -1,31 +1,21 @@
-import React from 'react';
-import monan1 from '../img/monan1.jpg'
+import React, { useEffect, useState } from 'react';
+import ListItems from './ListItems';
+import axios from 'axios';
 function Home(props) {
 
-    const styleImg = {
-        width: '90%'
-    }
+    const [meals, setMeals] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const res = await axios.get('/meals');
+            setMeals(res.data);
+        }
+        fetchData();
+    }, [])
     return (
         <div className="container-fluid mt-4">
             <div className="row text-center">
-                <div className="col-4 mb-3 ">
-                    <img src={monan1} alt="" style={styleImg} />
-                </div>
-                <div className="col-4 mb-3">
-                    <img src={monan1} alt="" style={styleImg} />
-                </div>
-                <div className="col-4 mb-3">
-                    <img src={monan1} alt="" style={styleImg} />
-                </div>
-                <div className="col-4 mb-3">
-                    <img src={monan1} alt="" style={styleImg} />
-                </div>
-                <div className="col-4 mb-3">
-                    <img src={monan1} alt="" style={styleImg} />
-                </div>
-                <div className="col-4 mb-3">
-                    <img src={monan1} alt="" style={styleImg} />
-                </div>
+                <ListItems meals={meals}></ListItems>
             </div>
         </div>
     );
