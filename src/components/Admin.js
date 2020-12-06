@@ -21,7 +21,6 @@ function Admin(props) {
                     <div className="col-3 list-group text-center p-0">
                         <Link to="/admin/viewmenu" className="list-group-item list-group-item-action" style={styleLink}>View Menu</Link>
                         <Link to="/admin/add" className="list-group-item list-group-item-action" style={styleLink}>Add Item</Link>
-                        <Link to="/admin/update" className="list-group-item list-group-item-action" style={styleLink}>Update Item</Link>
                     </div>
                     <div className="col-9" style={styleBackground}>
                         <Switch>

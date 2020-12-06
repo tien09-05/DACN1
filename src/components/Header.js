@@ -27,14 +27,19 @@ function Header(props) {
                     COLLEGE ONLINE CANTEEN
                 </Link>
                 <ul className="navbar-nav mx-auto">
+
                     <li className="nav-item" >
                         <Link className="nav-link " to="/" style={styleLink}>Home</Link>
                     </li>
+
                     <li className="nav-item" style={styleItem}>
                         <Link className="nav-link" to="/contact" style={styleLink}>Contact us</Link>
                     </li>
                     <li className="nav-item" style={styleItem}>
                         <Link className="nav-link" to="/about" style={styleLink}>About us</Link>
+                    </li>
+                    <li className="nav-item" >
+                        <Link className="nav-link " to="/admin" style={styleLink}>Admin</Link>
                     </li>
                     <li className="nav-item" style={styleItem}>
                         <Link className="nav-link" to="/services" style={styleLink}>Services</Link>
