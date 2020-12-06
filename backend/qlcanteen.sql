@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 15, 2020 lúc 11:27 AM
--- Phiên bản máy phục vụ: 5.7.31
--- Phiên bản PHP: 7.3.21
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 06, 2020 at 03:40 PM
+-- Server version: 5.7.31
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `qlcanteen`
+-- Database: `qlcanteen`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `drinks`
+-- Table structure for table `drinks`
 --
 
 DROP TABLE IF EXISTS `drinks`;
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `drinks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoices`
+-- Table structure for table `invoices`
 --
 
 DROP TABLE IF EXISTS `invoices`;
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `invoices` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `item_orders`
+-- Table structure for table `item_orders`
 --
 
 DROP TABLE IF EXISTS `item_orders`;
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `item_orders` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `meals`
+-- Table structure for table `meals`
 --
 
 DROP TABLE IF EXISTS `meals`;
@@ -103,21 +103,21 @@ CREATE TABLE IF NOT EXISTS `meals` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `meals`
+-- Dumping data for table `meals`
 --
 
 INSERT INTO `meals` (`id`, `name`, `price`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'Cơm cà ri bò', '65000', 'comcaribo', '2020-11-11 10:05:52', '2020-11-11 10:05:52'),
-(2, 'Cơm thịt bò xào', '60000', 'comthitboxao', '2020-11-11 10:06:56', '2020-11-11 10:06:56'),
-(3, 'Cơm trộn hàn quốc', '70000', 'comtronhanquoc', '2020-11-11 10:06:56', '2020-11-11 10:06:56'),
-(4, 'Cơm trộn phô mai', '75000', 'comtronphomai', '2020-11-11 10:08:08', '2020-11-11 10:08:08'),
-(5, 'Cơm thịt heo chiên giòn', '80000', 'comthitheochiengion', '2020-11-11 10:08:08', '2020-11-11 10:08:08'),
-(6, 'Cơm bò hầm vang', '90000', 'combohamvang', '2020-11-11 10:08:08', '2020-11-11 10:08:08');
+(1, 'Cơm cà ri bò', '65000', 'comcaribo.jpg', '2020-11-11 10:05:52', '2020-11-11 10:05:52'),
+(2, 'Cơm thịt bò xào', '60000', 'comthitboxao.jpg', '2020-11-11 10:06:56', '2020-11-11 10:06:56'),
+(3, 'Cơm trộn hàn quốc', '70000', 'comtronhanquoc.jpg', '2020-11-11 10:06:56', '2020-11-11 10:06:56'),
+(4, 'Cơm trộn phô mai', '75000', 'comtronphomai.jpg', '2020-11-11 10:08:08', '2020-11-11 10:08:08'),
+(5, 'Cơm thịt heo chiên giòn', '80000', 'comthitheochiengion.jpg', '2020-11-11 10:08:08', '2020-11-11 10:08:08'),
+(6, 'Cơm bò hầm vang', '90000', 'combohamvang.jpg', '2020-11-11 10:08:08', '2020-11-11 10:08:08');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menus`
+-- Table structure for table `menus`
 --
 
 DROP TABLE IF EXISTS `menus`;
@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `menus` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menu_meals`
+-- Table structure for table `menu_meals`
 --
 
 DROP TABLE IF EXISTS `menu_meals`;
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `menu_meals` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `orders`
 --
 
 DROP TABLE IF EXISTS `orders`;
@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `payments`
+-- Table structure for table `payments`
 --
 
 DROP TABLE IF EXISTS `payments`;
@@ -196,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `payments` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `payment_receipts`
+-- Table structure for table `payment_receipts`
 --
 
 DROP TABLE IF EXISTS `payment_receipts`;
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `payment_receipts` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `roles`
+-- Table structure for table `roles`
 --
 
 DROP TABLE IF EXISTS `roles`;
@@ -231,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -250,11 +250,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `item_orders`
+-- Constraints for table `item_orders`
 --
 ALTER TABLE `item_orders`
   ADD CONSTRAINT `item_orders_ibfk_1` FOREIGN KEY (`meal_id`) REFERENCES `meals` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -262,35 +262,35 @@ ALTER TABLE `item_orders`
   ADD CONSTRAINT `item_orders_ibfk_3` FOREIGN KEY (`drink_id`) REFERENCES `drinks` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `menu_meals`
+-- Constraints for table `menu_meals`
 --
 ALTER TABLE `menu_meals`
   ADD CONSTRAINT `menu_meals_ibfk_1` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `menu_meals_ibfk_2` FOREIGN KEY (`meal_id`) REFERENCES `meals` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Các ràng buộc cho bảng `orders`
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE SET NULL,
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`id_admin_validation`) REFERENCES `users` (`id`);
 
 --
--- Các ràng buộc cho bảng `payments`
+-- Constraints for table `payments`
 --
 ALTER TABLE `payments`
   ADD CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`invoice_reference`) REFERENCES `invoices` (`reference`),
   ADD CONSTRAINT `payments_ibfk_2` FOREIGN KEY (`id_admin_paid`) REFERENCES `users` (`id`);
 
 --
--- Các ràng buộc cho bảng `payment_receipts`
+-- Constraints for table `payment_receipts`
 --
 ALTER TABLE `payment_receipts`
   ADD CONSTRAINT `payment_receipts_ibfk_1` FOREIGN KEY (`invoice_reference`) REFERENCES `invoices` (`reference`),
   ADD CONSTRAINT `payment_receipts_ibfk_2` FOREIGN KEY (`payment_reference`) REFERENCES `payments` (`payment_reference`);
 
 --
--- Các ràng buộc cho bảng `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_code`) REFERENCES `roles` (`code`);
