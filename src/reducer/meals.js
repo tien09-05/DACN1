@@ -19,6 +19,7 @@ const mealReducer = (state = initState, action) => {
             return NewList;
         case "GET_MEALS":
             return [...action.payload];
+
         default:
             return state;
     }

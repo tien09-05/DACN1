@@ -1,21 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ListItems from './ListItems';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMeals } from '../actions/meals';
 import { addMealCart, decrease, deleteMealCart, increase } from '../actions/cart';
+import Control from './Control';
+import axios from "axios"
 
 function Home(props) {
-    const meals = useSelector(state => state.meals);
+    let meals = useSelector(state => state.meals);
     const cart = useSelector(state => state.cart);
     const dispatch = useDispatch();
     useEffect(() => {
         const action = getMeals();
         dispatch(action);
     }, [dispatch]);
+
     const handleSelectMeal = (meal) => {
         const action = addMealCart(meal);
         dispatch(action);
     }
+
     const tinhTongTien = () => {
         let tong = 0;
         cart.forEach(item => {
@@ -35,11 +39,39 @@ function Home(props) {
         const action = deleteMealCart(id);
         dispatch(action);
     }
+    // search
+    const [keyword, setKeyword] = useState("");
+    const handleSearch = (keyword) => {
+        setKeyword(keyword);
+    }
+    if (keyword) {
+        meals = meals.filter(meal => meal.name.indexOf(keyword) !== -1)
+    }
+
+    // fillter
+    const [select, setSelect] = useState("0");
+    const handleFilter = (value) => {
+        setSelect(value);
+    }
+    if (select === "0") {
+
+    } else if (select === "1") {
+        meals.sort(function (a, b) { return a.price - b.price });
+    } else {
+        meals.sort(function (a, b) { return b.price - a.price });
+
+    }
     return (
         <div className="container-fluid mt-4 pb-5">
             <div className="row text-center">
+                <Control handleSearch={handleSearch} handleFilter={handleFilter}></Control>
+            </div>
+            <div className="row text-center">
                 <ListItems meals={meals} handleSelectMeal={handleSelectMeal}></ListItems>
             </div>
+
+
+            {/* Cart */}
             <h1 className="text-center">Danh sách món đã chọn</h1>
             {cart.length > 0 ? <div className="row">
                 <table className="table table-bordered w-50 m-auto pb-5">

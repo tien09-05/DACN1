@@ -53,7 +53,6 @@ function AddItem(props) {
             name: '',
             price: ''
         })
-        console.log(state.name);
     }
     return (
 
