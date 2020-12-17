@@ -54,6 +54,7 @@ function Home(props) {
         setSelect(value);
     }
     if (select === "0") {
+        meals.sort(function (a, b) { return a.id - b.id });
 
     } else if (select === "1") {
         meals.sort(function (a, b) { return a.price - b.price });
